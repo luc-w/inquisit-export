@@ -1,6 +1,6 @@
 ## Inquisit Export Helper
 
-Data from [Inquisit Millisecond](https://www.millisecond.com/) experiments/tests.
+Makes converting multiple iqdat-files with individual participant data from [Inquisit Millisecond](https://www.millisecond.com/) experiments/tests to csv-files easy.
 
 1. Download the entire data folder of an experiment as a compressed zip-file.
 2. Extract the zip file to a folder on your hard drive.
