@@ -13,7 +13,8 @@ for(i in 1:length(dirs)){
     
   list_files <- lapply(paste0(dirs[i], "/", temp), read.delim, stringsAsFactors = F) # import all files in a list
   dat <- do.call(rbind, list_files) # bind elements of the file list to a data.frame
-  filename <- paste0(gsub("./", "", dirs[i]), ".csv") # define file name for new data.frame
+  
+  filename <- paste0(sub("/", "_", sub("./", "", dirs[i])), ".csv") # define file name for new data.frame
   write.csv2(dat, file = paste0(wd, "/", filename), row.names = FALSE) # export data.frame to working directory       
         
   print(paste0("Files in", dirs[i], " joined and exported."))
@@ -26,4 +27,3 @@ for(i in 1:length(dirs)){
   }
 
 }
-
